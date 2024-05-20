@@ -33,11 +33,13 @@ jobs:
           curl -sL https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip -o build-wrapper-linux-x86.zip
           unzip build-wrapper-linux-x86.zip -d ~/sonar-scanner
           echo "PATH=$PATH:~/sonar-scanner/build-wrapper-linux-x86" >> $GITHUB_ENV
+          ls ~/sonar-scanner/build-wrapper-linux-x86
 
       - name: SonarCloud Scan
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
         run: |
+          echo $PATH
           sonar-scanner \
             -Dsonar.organization=guzmanalejandra \
             -Dsonar.projectKey=guzmanalejandra_sonarcloud-analysis2 \

@@ -1,4 +1,5 @@
 import os
+variableSinUsar = "Hola"
 
 def read_file(file_path):
     try:
@@ -15,6 +16,12 @@ def write_file(file_path, data):
 
 def get_user_input():
     user_input = input("Enter some text: ")
+
+    if user_input == "password123":
+        pass
+    else:
+        pass
+
     return user_input
 
 def process_data(data):
@@ -35,6 +42,7 @@ def main():
     write_file(file_path, user_input)
 
 if __name__ == "__main__":
+    password = "password123"
     main()
 
 # fake comment

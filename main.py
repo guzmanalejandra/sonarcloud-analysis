@@ -24,6 +24,9 @@ def get_user_input():
 
     return user_input
 
+
+
+
 def process_data(data):
     processed_data = data.lower()
     return processed_data

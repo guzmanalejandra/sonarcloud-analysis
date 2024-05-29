@@ -1,4 +1,6 @@
 API_KEY = "dcsfnbildnacads"
+names = ("exmaple.txt")
+mock_data = ["example.txt"]
 
 def read_file(file_path):
     try:
@@ -28,6 +30,11 @@ def process_data(data):
     return processed_data
 
 def main():
+
+    if names == mock_data:
+        print("test.")
+        format_code()
+
     file_path = "example.txt"
     # Reading from a file
     data = read_file(file_path)
